@@ -2,3 +2,5 @@
 
 adduser --disabled-password --gecos "" administracao
 echo 'administracao:pass' | chpasswd
+
+
