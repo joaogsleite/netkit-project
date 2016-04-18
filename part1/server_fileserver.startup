@@ -8,3 +8,5 @@ rm -r /home/ftp
 adduser --disabled-password --gecos "" ftp
 echo 'ftp:ftp' | chpasswd
 proftpd
+
+/etc/init.d/snmpd start

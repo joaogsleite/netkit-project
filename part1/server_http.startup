@@ -5,3 +5,4 @@ ip route add default via 10.0.0.134
 
 /etc/init.d/apache2 start
 /etc/init.d/bind start
+/etc/init.d/snmpd start

@@ -1,6 +1,5 @@
 server_email: switch_public
 server_http: switch_public
-server_monitor: switch_private
 server_fileserver: switch_private
 pc_admin: switch_admin
 pc_contabilista: switch_admin
@@ -38,3 +37,10 @@ router_lisboa: router_sede
 router_porto: router_sede
 router_coimbra: router_sede
 router_advogados: router_sede
+server_monitor: router_sede
+server_monitor: router_lisboa
+server_monitor: router_porto
+server_monitor: router_coimbra
+server_monitor: server_http
+server_monitor: server_email
+server_monitor: server_fileserver
