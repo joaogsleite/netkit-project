@@ -25,6 +25,8 @@ ip link set dev eth7 up
 
 ip route add 10.0.0.4/30 via 10.0.0.2
 
+ip route add 0.0.0.0/0 via 192.168.0.1
+
 /etc/init.d/zebra start
 /etc/init.d/dhcp3-server start
 /etc/init.d/snmpd start

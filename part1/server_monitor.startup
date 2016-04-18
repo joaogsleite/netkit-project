@@ -1,13 +1,13 @@
 ip addr add dev eth0 192.168.255.3/29
 ip link set dev eth0 up
 
-
 ip route add default via 192.168.255.6
 
-#/etc/init.d/apache2 start
-#/etc/init.d/snmpd start
 
-#cfgmaker --global "workDir:/var/www" private@10.0.0.129 private@10.0.0.130 private@192.168.255.1 private@192.168.255.2 private@10.0.0.209 private@10.0.0.210 private@10.0.0.214 private@10.0.0.218 --output=/root/mrtg.cfg
+a2ensite monitor.conf
+/etc/init.d/apache2 start
 
-#env LANG=C mrtg /root/mrtg.cfg --daemon
-#indexmaker --title "Server States" --output /var/www/index.html /root/mrtg.cfg
+cfgmaker --global "workDir:/var/www" private@10.0.0.129 private@10.0.0.130 private@192.168.255.2 private@10.0.0.209 private@10.0.0.210 private@10.0.0.214 private@10.0.0.218 --output=/root/mrtg.cfg
+
+env LANG=C mrtg /root/mrtg.cfg --daemon
+indexmaker --title "Server States" --output /var/www/index.html /root/mrtg.cfg
