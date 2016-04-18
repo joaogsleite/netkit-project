@@ -1,0 +1,7 @@
+/etc/init.d/networking restart
+
+adduser --disabled-password --gecos "" lisboa-oficina
+echo 'lisboa-oficina:pass' | chpasswd
+
+adduser --disabled-password --gecos "" lisboa-pecas
+echo 'lisboa-pecas:pass' | chpasswd

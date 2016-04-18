@@ -1,0 +1,7 @@
+/etc/init.d/networking restart
+
+adduser --disabled-password --gecos "" coimbra-oficina
+echo 'coimbra-oficina:pass' | chpasswd
+
+adduser --disabled-password --gecos "" coimbra-pecas
+echo 'coimbra-pecas:pass' | chpasswd

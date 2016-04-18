@@ -1,0 +1,10 @@
+ip addr add dev eth0 192.168.255.2/29
+ip link set dev eth0 up
+
+ip route add default via 192.168.255.6
+
+deluser ftp
+rm -r /home/ftp
+adduser --disabled-password --gecos "" ftp
+echo 'ftp:ftp' | chpasswd
+proftpd

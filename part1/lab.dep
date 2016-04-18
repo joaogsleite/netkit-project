@@ -1,0 +1,40 @@
+server_email: switch_public
+server_http: switch_public
+server_monitor: switch_private
+server_fileserver: switch_private
+pc_admin: switch_admin
+pc_contabilista: switch_admin
+pc_rh: switch_admin
+pc_sede1: ap_sede
+pc_sede2: ap_sede
+switch_public: router_sede
+switch_private: router_sede
+switch_admin: router_sede
+ap_sede: router_sede
+
+pc_recep_lisboa: switch_admin_lisboa
+pc_armazem_lisboa: switch_admin_lisboa
+pc_lisboa1: ap_lisboa
+pc_lisboa2: ap_lisboa
+switch_admin_lisboa: router_lisboa
+ap_lisboa: router_lisboa
+
+pc_recep_porto: switch_admin_porto
+pc_armazem_porto: switch_admin_porto
+pc_porto1: ap_porto
+pc_porto2: ap_porto
+switch_admin_porto: router_porto
+ap_porto: router_porto
+
+pc_recep_coimbra: switch_admin_coimbra
+pc_armazem_coimbra: switch_admin_coimbra
+pc_coimbra1: ap_coimbra
+pc_coimbra2: ap_coimbra
+switch_admin_coimbra: router_coimbra
+ap_coimbra: router_coimbra
+
+server_advogados: router_advogados
+router_lisboa: router_sede
+router_porto: router_sede
+router_coimbra: router_sede
+router_advogados: router_sede
