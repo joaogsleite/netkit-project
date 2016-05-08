@@ -1,0 +1,15 @@
+ip addr add dev eth0 10.0.0.5/30
+ip link set dev eth0 up
+
+ip route add default via 10.0.0.6
+
+chmod a+w /var/spool/mail
+chmod go-rw /etc/exim4/exim4.conf
+
+adduser --disabled-password --gecos "" geral
+echo 'geral:pass' | chpasswd
+
+/etc/init.d/bind start
+/etc/init.d/exim4 start
+/etc/init.d/inetd start
+/etc/init.d/apache2 start

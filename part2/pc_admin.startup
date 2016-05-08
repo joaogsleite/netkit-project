@@ -1,0 +1,6 @@
+/etc/init.d/networking restart
+
+adduser --disabled-password --gecos "" administracao
+echo 'administracao:pass' | chpasswd
+
+

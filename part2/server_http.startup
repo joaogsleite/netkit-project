@@ -1,0 +1,14 @@
+ip addr add dev eth0 10.0.0.130/29
+ip link set dev eth0 up
+
+ip route add default via 10.0.0.134
+
+
+
+/etc/init.d/bind start
+/etc/init.d/snmpd start
+
+
+a2ensite autocar.ttt.conf
+a2ensite intranet.conf
+/etc/init.d/apache2 start

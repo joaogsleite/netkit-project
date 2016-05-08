@@ -1,0 +1,42 @@
+ip addr add dev eth0 10.0.0.129/29
+ip link set dev eth0 up
+
+ip route add default via 10.0.0.134
+
+chmod a+w /var/spool/mail
+chmod go-rw /etc/exim4/exim4.conf
+
+adduser --disabled-password --gecos "" administracao
+echo 'administracao:pass' | chpasswd
+
+adduser --disabled-password --gecos "" contabilidade
+echo 'contabilidade:pass' | chpasswd
+
+adduser --disabled-password --gecos "" rh
+echo 'rh:pass' | chpasswd
+
+adduser --disabled-password --gecos "" lisboa-oficina
+echo 'lisboa-oficina:pass' | chpasswd
+
+adduser --disabled-password --gecos "" lisboa-pecas
+echo 'lisboa-pecas:pass' | chpasswd
+
+adduser --disabled-password --gecos "" porto-oficina
+echo 'porto-oficina:pass' | chpasswd
+
+adduser --disabled-password --gecos "" porto-pecas
+echo 'porto-pecas:pass' | chpasswd
+
+adduser --disabled-password --gecos "" coimbra-oficina
+echo 'coimbra-oficina:pass' | chpasswd
+
+adduser --disabled-password --gecos "" coimbra-pecas
+echo 'coimbra-pecas:pass' | chpasswd
+
+adduser --disabled-password --gecos "" geral
+echo 'geral:pass' | chpasswd
+
+/etc/init.d/bind start
+/etc/init.d/exim4 start
+/etc/init.d/inetd start
+/etc/init.d/snmpd start
