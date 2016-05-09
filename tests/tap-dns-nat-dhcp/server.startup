@@ -1,0 +1,14 @@
+
+ip link set eth0 up
+ip address add 10.0.1.100/24 dev eth0
+ip route add default via 10.0.1.1
+
+
+# SSL HTTPS
+# openssl genrsa -out halib.key 2048
+# openssl req -new -key halib.key -out halib.csr
+# mv halib.* lab/server/ssl/certs/
+a2ensite halib.ttt.conf
+a2ensite intranet.conf
+a2enmod ssl
+/etc/init.d/apache2 start

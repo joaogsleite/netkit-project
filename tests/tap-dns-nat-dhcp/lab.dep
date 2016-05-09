@@ -1,0 +1,5 @@
+server 	: router
+pc01	: router
+server 	: dns1
+pc01	: dns1
+dns1 	: router

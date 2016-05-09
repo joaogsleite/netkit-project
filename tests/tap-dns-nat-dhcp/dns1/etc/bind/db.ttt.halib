@@ -1,0 +1,22 @@
+$TTL   60000
+@ 	IN 	SOA ns1.halib.ttt. 	root.ns1.halib.ttt. (
+                2006031201 ; serial
+                     	28 ; refresh
+                     	14 ; retry
+                   3600000 ; expire
+                       	15 ; negative  
+)
+
+
+@ 			IN 	NS 		ns1.halib.ttt.
+
+ns1			IN 	A 		10.0.2.100
+
+server		IN	A		10.0.1.100
+
+
+@			IN 	A		10.0.1.100
+www			IN 	CNAME	@
+intranet	IN 	CNAME 	@
+
+
