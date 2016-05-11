@@ -2,11 +2,12 @@
 ip link set eth1 up
 ip link set eth2 up
 ip link set eth3 up
+ip link set eth4 up
 
-ip address add 10.0.1.1/24 dev eth1
-ip address add 10.0.2.1/24 dev eth2
-
-ip address add 192.168.10.1/24 dev eth3
+ip address add 10.0.1.1/24 		dev eth1
+ip address add 10.0.2.1/24 		dev eth2
+ip address add 192.168.10.1/24 	dev eth3
+ip address add 10.0.3.1/24 		dev eth4
 
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 

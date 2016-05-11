@@ -1,3 +1,4 @@
+ssh 	: router
 server 	: router
 pc01	: router
 server 	: dns1

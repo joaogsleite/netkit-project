@@ -1,2 +1,7 @@
 
 /etc/init.d/networking restart
+
+chmod 700 /root/.ssh
+chmod 700 /root/.ssh/id_rsa  
+
+#cat ~/.ssh/id_rsa.pub | ssh admin@10.0.3.100 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"

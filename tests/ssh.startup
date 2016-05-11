@@ -1,0 +1,18 @@
+
+ip link set eth0 up
+ip address add 10.0.3.100/24 dev eth0
+ip route add default via 10.0.3.1
+
+
+
+
+adduser --disabled-password --gecos "" admin
+echo 'admin:admin' | chpasswd
+echo "admin ALL=ALL" >> /etc/sudoers
+dpkg -i /sudo.deb
+mkdir /home/admin/.ssh/
+mv authorized_keys /home/admin/.ssh/
+chmod 644 /home/admin/.ssh/authorized_keys 
+
+
+/etc/init.d/ssh start
