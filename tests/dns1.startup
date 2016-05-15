@@ -4,3 +4,9 @@ ip address add 10.0.2.100/24 dev eth0
 ip route add default via 10.0.2.1
 
 /etc/init.d/bind start
+
+
+# Generate DNS key
+#################################################
+# ./dnssec-keygen -a HMAC-MD5 -n HOST -b 128 dns
+# cat dns.key

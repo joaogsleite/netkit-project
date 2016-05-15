@@ -7,6 +7,7 @@ ip route add default via 10.0.1.1
 # SSL HTTPS
 # openssl genrsa -out halib.key 2048
 # openssl req -new -key halib.key -out halib.csr
+# openssl x509 -req -days 365 -in autocar.csr -signkey autocar.key -out autocar.crt
 # mv halib.* lab/server/ssl/certs/
 a2ensite halib.ttt.conf
 a2ensite intranet.conf

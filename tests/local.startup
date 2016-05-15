@@ -2,3 +2,14 @@
 sudo ip route add 10.0.0.0/16 via 192.168.0.2
 
 sudo iptables -t nat -A POSTROUTING -o wlp3s0 -j MASQUERADE
+
+
+
+# DNS
+########################################
+# sudo vim /etc/network/interfaces
+### auto eth0
+### iface eth0 inet dhcp
+### dns-nameservers 10.0.2.100
+# sudo invoke-rc.d networking restart
+########################################
