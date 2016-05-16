@@ -1,0 +1,21 @@
+$TTL   60000
+@               IN      SOA     ns1.leilei.ttt.    root.ns1.leilei.ttt. (
+                        2006051201 ; serial
+                             28800 ; refresh
+                             14400 ; retry
+                           3600000 ; expire
+                                 0 ; negative cache ttl                                                                                 
+                                 
+                                 )
+                           
+@      	IN  NS  ns1.leilei.ttt.
+@ 		IN MX 5 mail.leilei.ttt.
+ns1     IN  A   10.0.0.5
+
+@ 		IN 	A 	10.0.0.5
+
+www 	IN	CNAME 	leilei.ttt.
+
+imap	IN 	A 		10.0.0.5
+pop		IN 	A 		10.0.0.5
+mail	IN 	A 		10.0.0.5

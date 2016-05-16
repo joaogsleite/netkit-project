@@ -1,0 +1,24 @@
+
+ip link set eth1 up
+ip link set eth2 up
+ip link set eth3 up
+ip link set eth4 up
+ip link set eth5 up
+ip link set eth6 up
+ip link set eth7 up
+
+ip address add 10.0.0.134/29	dev eth1
+ip address add 192.168.255.6/29	dev eth2
+ip address add 10.0.0.142/29	dev eth3
+ip address add 10.0.0.158/28	dev eth4
+
+ip address add 10.0.0.1/30 		dev eth5
+
+ip address add 10.0.0.209/30 	dev eth6
+ip address add 10.0.0.222/30 	dev eth7
+
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+/etc/init.d/dhcp3-server start
+/etc/init.d/zebra start
+

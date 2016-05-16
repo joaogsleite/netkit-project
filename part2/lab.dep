@@ -1,0 +1,23 @@
+
+sedePublicSwitch : sedeRouter
+sedePrivateSwitch : sedeRouter
+sedeAdminSwitch : sedeRouter
+sedeGuestsAP : sedeRouter
+
+sedeHttpServer : sedePublicSwitch
+sedeEmailServer : sedePublicSwitch
+
+sedeMonitor : sedePrivateSwitch
+sedeFileServer : sedePrivateSwitch
+
+sedeAdminPc : sedeAdminSwitch
+sedeContPc : sedeAdminSwitch
+sedeRhPc : sedeAdminSwitch
+
+sedeGuestPc1 : sedeGuestsAP
+sedeGuestPc2 : sedeGuestsAP
+
+leileiServer : leileiRouter
+leileiRouter : sedeRouter
+
+

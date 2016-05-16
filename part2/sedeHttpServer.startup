@@ -1,0 +1,6 @@
+
+ip link set eth0 up
+ip address add 10.0.0.130/29 dev eth0
+ip route add default via 10.0.0.134
+
+/etc/init.d/bind start
