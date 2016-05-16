@@ -17,7 +17,15 @@ ip address add 10.0.0.1/30 		dev eth5
 ip address add 10.0.0.209/30 	dev eth6
 ip address add 10.0.0.222/30 	dev eth7
 
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+# NAT
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE #tap
+iptables -t nat -A POSTROUTING -o eth5 -j MASQUERADE #leilei
+
+# FIREWALL
+#iptables -A FORWARD -i eth0 -j DROP
+#iptables -A FORWARD -i eth5 -j DROP
+#iptables -A FORWARD -p tcp -s 0/0 -d 10.0.0.130 --sport 1:65535 --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 /etc/init.d/dhcp3-server start
 /etc/init.d/zebra start

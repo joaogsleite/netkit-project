@@ -2,3 +2,11 @@
 ip link set eth0 up
 ip address add 192.168.255.2/29 dev eth0
 ip route add default via 192.168.255.6
+
+/etc/init.d/proftpd start
+
+adduser --disabled-password --gecos "" ftp --home /home/ftp
+echo 'ftp:ftp' | chpasswd
+
+chmod 777 -R /home/ftp
+echo "/bin/false" >> /etc/shells

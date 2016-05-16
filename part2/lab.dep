@@ -17,7 +17,31 @@ sedeRhPc : sedeAdminSwitch
 sedeGuestPc1 : sedeGuestsAP
 sedeGuestPc2 : sedeGuestsAP
 
+
 leileiServer : leileiRouter
 leileiRouter : sedeRouter
 
+
+lisboaGuestPc1 : lisboaGuestsAP
+lisboaGuestPc2 : lisboaGuestsAP
+lisboaAdminArmPc : lisboaAdminSwitch
+lisboaAdminRecPc : lisboaAdminSwitch
+lisboaGuestsAP : lisboaRouter
+lisboaAdminSwitch : lisboaRouter
+
+
+coimbraGuestPc1 : coimbraGuestsAP
+coimbraGuestPc2 : coimbraGuestsAP
+coimbraAdminArmPc : coimbraAdminSwitch
+coimbraAdminRecPc : coimbraAdminSwitch
+coimbraGuestsAP : coimbraRouter
+coimbraAdminSwitch : coimbraRouter
+
+
+portoGuestPc1 : portoGuestsAP
+portoGuestPc2 : portoGuestsAP
+portoAdminArmPc : portoAdminSwitch
+portoAdminRecPc : portoAdminSwitch
+portoGuestsAP : portoRouter
+portoAdminSwitch : portoRouter
 
