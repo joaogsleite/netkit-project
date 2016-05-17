@@ -5,7 +5,6 @@ ip route add default via 10.0.3.1
 
 
 
-
 adduser --disabled-password --gecos "" admin
 echo 'admin:admin' | chpasswd
 echo "admin ALL=ALL" >> /etc/sudoers
