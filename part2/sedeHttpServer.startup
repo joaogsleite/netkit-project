@@ -4,3 +4,27 @@ ip address add 10.0.0.130/29 dev eth0
 ip route add default via 10.0.0.134
 
 /etc/init.d/bind start
+
+
+# SSH ######################################
+adduser --disabled-password --gecos "" admin
+echo 'admin:admin' | chpasswd
+echo "admin ALL=ALL" >> /etc/sudoers
+dpkg -i /sudo.deb
+
+chown admin:admin -R /home/admin
+chmod 700 -R /home/admin
+
+/etc/init.d/ssh start
+############################################
+
+# SSL HTTPS######
+# openssl genrsa -out autocar.key 2048
+# openssl req -new -key autocar.key -out autocar.csr
+# openssl x509 -req -days 365 -in autocar.csr -signkey autocar.key -out autocar.crt
+# mv autocar.* part2/sedeHttpServer/etc/ssl/certs/
+a2ensite autocar.ttt.conf
+a2ensite intranet.conf
+a2enmod ssl
+/etc/init.d/apache2 start
+#######################

@@ -10,3 +10,18 @@ echo 'ftp:ftp' | chpasswd
 
 chmod 777 -R /home/ftp
 echo "/bin/false" >> /etc/shells
+
+
+# SSH ######################################
+adduser --disabled-password --gecos "" admin
+echo 'admin:admin' | chpasswd
+echo "admin ALL=ALL" >> /etc/sudoers
+dpkg -i /sudo.deb
+
+chown admin:admin -R /home/admin
+chmod 700 -R /home/admin
+
+/etc/init.d/ssh start
+############################################
+
+/etc/init.d/ssh start

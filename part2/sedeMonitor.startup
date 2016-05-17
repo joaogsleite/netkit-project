@@ -2,3 +2,17 @@
 ip link set eth0 up
 ip address add 192.168.255.3/29 dev eth0
 ip route add default via 192.168.255.6
+
+# SSH ######################################
+adduser --disabled-password --gecos "" admin
+echo 'admin:admin' | chpasswd
+echo "admin ALL=ALL" >> /etc/sudoers
+dpkg -i /sudo.deb
+
+chown admin:admin -R /home/admin
+chmod 700 -R /home/admin
+
+/etc/init.d/ssh start
+############################################
+
+/etc/init.d/ssh start
