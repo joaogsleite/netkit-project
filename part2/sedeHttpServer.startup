@@ -28,3 +28,37 @@ a2ensite intranet.conf
 a2enmod ssl
 /etc/init.d/apache2 start
 #######################
+
+
+
+# VPN
+# cd /usr/share/doc/openvpn/examples/easy-rsa/2.0
+# vim vars
+# source ./vars
+# ./clean-all
+# ./build-ca
+# ./build-key-server server
+# ./build-key client1
+# ./build-dh
+# cp keys/ca.crt /hostlab/adminPc/root/
+# cp keys/client1.crt /hostlab/adminPc/root/
+# cp keys/client1.key /hostlab/adminPc/root/
+# cp keys/ca.crt /hostlab/adminPc/sedeHttpServer/
+# cp keys/dh1024.pem /hostlab/adminPc/sedeHttpServer/
+# cp keys/server.crt /hostlab/adminPc/sedeHttpServer/
+# cp keys/server.key /hostlab/adminPc/sedeHttpServer/
+
+
+chmod +x /etc/openvpn/update-resolv-conf
+dpkg -i /sudo.deb
+
+
+iptables -P INPUT ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -F
+iptables -A FORWARD -o tun+ -s 192.168.255.0/24 -j ACCEPT
+iptables -A FORWARD -o tun+ -s 10.0.0.128/25 -j ACCEPT
+iptables -A FORWARD -o tun+ -d 10.0.0.130 -j ACCEPT
+iptables -A FORWARD -o tun+ -j DROP
+

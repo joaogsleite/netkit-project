@@ -12,6 +12,10 @@ if [ "$1" = "ssh2" ]; then
 	lstart sedeRouter sedePublicSwitch sedeEmailServer sedeHttpServer sedePrivateSwitch sedeMonitor sedeFileServer leileiRouter adminPc
 fi
 
+if [ "$1" = "tunnel" ]; then
+	lstart sedeRouter sedePublicSwitch sedeEmailServer sedeHttpServer sedePrivateSwitch sedeMonitor sedeFileServer leileiRouter adminPc
+fi
+
 if [ "$1" = "ftp" ]; then
 	lstart sedeRouter sedePublicSwitch sedeEmailServer sedePrivateSwitch sedeFileServer sedeAdminSwitch sedeRhPc
 fi

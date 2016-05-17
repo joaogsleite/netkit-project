@@ -1,0 +1,71 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2 (0x2)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=PT, ST=Lisboa, L=Lisboa, O=Autocar, CN=Autocar CA/emailAddress=admin@autocar.ttt
+        Validity
+            Not Before: May 17 20:09:56 2016 GMT
+            Not After : May 15 20:09:56 2026 GMT
+        Subject: C=PT, ST=Lisboa, L=Lisboa, O=Autocar, CN=client1/emailAddress=admin@autocar.ttt
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:b8:2f:8f:3e:d1:20:e5:97:e8:12:cb:3c:95:eb:
+                    73:48:06:2e:c1:52:a7:a5:05:9d:33:e6:42:02:e3:
+                    b8:dc:aa:b7:68:a9:43:d6:ae:b9:79:9b:a4:89:39:
+                    1b:dd:ba:30:6c:ce:c4:1d:52:ec:0f:a3:2d:4e:68:
+                    4e:f2:b0:67:49:5c:e9:e0:96:17:0f:43:c9:18:57:
+                    f0:2a:a4:fa:89:10:ad:9f:6e:00:9f:49:0b:66:38:
+                    f5:72:1c:e1:aa:6c:d2:57:5e:8c:1b:d4:74:77:39:
+                    1e:c5:76:43:a9:11:9c:69:36:e2:14:aa:88:ab:ef:
+                    a9:e3:53:69:1b:55:27:e0:5b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                14:BC:47:B6:ED:A7:5A:51:EB:52:B0:BF:87:A1:F2:A1:15:FC:82:8A
+            X509v3 Authority Key Identifier: 
+                keyid:16:78:CC:D1:F0:C7:51:55:26:71:8B:C0:E4:4E:81:25:4C:99:AD:9F
+                DirName:/C=PT/ST=Lisboa/L=Lisboa/O=Autocar/CN=Autocar CA/emailAddress=admin@autocar.ttt
+                serial:CB:84:53:FA:FF:EF:FA:98
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+        52:13:96:6c:e0:8d:27:e4:08:6a:73:1a:46:22:3e:83:5f:87:
+        4b:24:1e:75:27:b5:5b:d4:da:a7:88:ac:29:89:69:61:6c:b6:
+        f1:d2:96:00:84:80:89:6d:8a:b4:fa:b9:44:f6:3f:1c:d0:dc:
+        0c:c7:2c:9c:84:f2:6f:3f:71:3c:04:c3:a2:3e:c6:e4:f7:18:
+        da:8b:97:aa:26:b1:a5:d8:5d:bc:fd:dc:d0:9a:66:7c:14:db:
+        ca:1a:1a:bd:d2:85:cc:2c:6b:d9:43:db:a1:ea:c3:f1:33:fa:
+        8a:98:78:1e:a2:a8:b9:49:37:98:6d:4c:86:08:d2:15:f6:5c:
+        9c:8f
+-----BEGIN CERTIFICATE-----
+MIIDkTCCAvqgAwIBAgIBAjANBgkqhkiG9w0BAQUFADB4MQswCQYDVQQGEwJQVDEP
+MA0GA1UECBMGTGlzYm9hMQ8wDQYDVQQHEwZMaXNib2ExEDAOBgNVBAoTB0F1dG9j
+YXIxEzARBgNVBAMTCkF1dG9jYXIgQ0ExIDAeBgkqhkiG9w0BCQEWEWFkbWluQGF1
+dG9jYXIudHR0MB4XDTE2MDUxNzIwMDk1NloXDTI2MDUxNTIwMDk1NlowdTELMAkG
+A1UEBhMCUFQxDzANBgNVBAgTBkxpc2JvYTEPMA0GA1UEBxMGTGlzYm9hMRAwDgYD
+VQQKEwdBdXRvY2FyMRAwDgYDVQQDEwdjbGllbnQxMSAwHgYJKoZIhvcNAQkBFhFh
+ZG1pbkBhdXRvY2FyLnR0dDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAuC+P
+PtEg5ZfoEss8letzSAYuwVKnpQWdM+ZCAuO43Kq3aKlD1q65eZukiTkb3bowbM7E
+HVLsD6MtTmhO8rBnSVzp4JYXD0PJGFfwKqT6iRCtn24An0kLZjj1chzhqmzSV16M
+G9R0dzkexXZDqRGcaTbiFKqIq++p41NpG1Un4FsCAwEAAaOCASwwggEoMAkGA1Ud
+EwQCMAAwLQYJYIZIAYb4QgENBCAWHkVhc3ktUlNBIEdlbmVyYXRlZCBDZXJ0aWZp
+Y2F0ZTAdBgNVHQ4EFgQUFLxHtu2nWlHrUrC/h6HyoRX8goowgaoGA1UdIwSBojCB
+n4AUFnjM0fDHUVUmcYvA5E6BJUyZrZ+hfKR6MHgxCzAJBgNVBAYTAlBUMQ8wDQYD
+VQQIEwZMaXNib2ExDzANBgNVBAcTBkxpc2JvYTEQMA4GA1UEChMHQXV0b2NhcjET
+MBEGA1UEAxMKQXV0b2NhciBDQTEgMB4GCSqGSIb3DQEJARYRYWRtaW5AYXV0b2Nh
+ci50dHSCCQDLhFP6/+/6mDATBgNVHSUEDDAKBggrBgEFBQcDAjALBgNVHQ8EBAMC
+B4AwDQYJKoZIhvcNAQEFBQADgYEAUhOWbOCNJ+QIanMaRiI+g1+HSyQedSe1W9Ta
+p4isKYlpYWy28dKWAISAiW2KtPq5RPY/HNDcDMcsnITybz9xPATDoj7G5PcY2ouX
+qiaxpdhdvP3c0JpmfBTbyhoavdKFzCxr2UPboerD8TP6iph4HqKouUk3mG1MhgjS
+FfZcnI8=
+-----END CERTIFICATE-----

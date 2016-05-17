@@ -5,3 +5,10 @@ ip route add default via 10.0.0.10
 
 # SSH
 chmod 700 -R /root/.ssh
+
+# VPN
+# http://allanmcrae.com/2013/09/routing-traffic-with-openvpn/
+
+dpkg -i /resolvconf.deb
+
+# https://wiki.archlinux.org/index.php/OpenVPN#DNS
