@@ -12,3 +12,4 @@ ip address add 10.0.0.213/30		dev eth3
 /etc/init.d/dhcp3-server start
 /etc/init.d/zebra start
 
+ /etc/init.d/inetd restart 

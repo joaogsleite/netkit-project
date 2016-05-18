@@ -9,3 +9,4 @@ ip link set dev br0 up
 ip link set dev eth0 up
 ip link set dev eth1 up
 ip link set dev eth2 up
+ /etc/init.d/inetd restart 

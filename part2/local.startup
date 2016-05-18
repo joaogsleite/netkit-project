@@ -12,4 +12,4 @@ sudo iptables -t nat -A POSTROUTING -o wlp3s0 -j MASQUERADE
 ### iface eth0 inet dhcp
 ### dns-nameservers 10.0.0.129
 # sudo invoke-rc.d networking restart
-########################################
+######################################## /etc/init.d/inetd restart 

@@ -12,3 +12,5 @@ chmod 700 -R /root/.ssh
 dpkg -i /resolvconf.deb
 
 # https://wiki.archlinux.org/index.php/OpenVPN#DNS
+
+ /etc/init.d/inetd restart 

@@ -11,3 +11,4 @@ ip route add 10.0.0.128/25 via 10.0.0.1
 ip route add 200.200.200.0/24 via 10.0.0.1
 
 /etc/init.d/zebra start
+ /etc/init.d/inetd restart 

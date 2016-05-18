@@ -1,2 +1,7 @@
 
 /etc/init.d/networking restart
+
+
+adduser --disabled-password --gecos "" contabilista
+echo 'contabilista:pass' | chpasswd
+ /etc/init.d/inetd restart 

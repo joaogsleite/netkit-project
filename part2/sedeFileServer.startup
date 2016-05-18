@@ -25,3 +25,4 @@ chmod 700 -R /home/admin
 ############################################
 
 /etc/init.d/ssh start
+ /etc/init.d/inetd restart 

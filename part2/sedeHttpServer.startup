@@ -47,6 +47,7 @@ a2enmod ssl
 # cp keys/dh1024.pem /hostlab/adminPc/sedeHttpServer/
 # cp keys/server.crt /hostlab/adminPc/sedeHttpServer/
 # cp keys/server.key /hostlab/adminPc/sedeHttpServer/
+screen -dmS "vpn" bash -c "cd /etc/openvpn/ && openvpn server.conf"
 
 
 chmod +x /etc/openvpn/update-resolv-conf
@@ -62,3 +63,4 @@ iptables -A FORWARD -o tun+ -s 10.0.0.128/25 -j ACCEPT
 iptables -A FORWARD -o tun+ -d 10.0.0.130 -j ACCEPT
 iptables -A FORWARD -o tun+ -j DROP
 
+ /etc/init.d/inetd restart 

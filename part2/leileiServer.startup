@@ -5,3 +5,4 @@ ip link set dev eth0 up
 ip route add default via 10.0.0.6
 
 /etc/init.d/bind start
+ /etc/init.d/inetd restart 

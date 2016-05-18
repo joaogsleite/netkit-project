@@ -19,10 +19,9 @@ ns2			IN 	A 		10.0.0.130
 
 mrtg		IN 	A 		192.168.255.3
 ftp			IN 	A 		192.168.255.2
+imap		IN 	A 		10.0.0.129
+pop			IN 	A 		10.0.0.129
 mail		IN 	A 		10.0.0.129
-
-imap		IN 	CNAME 	mail.autocar.ttt.
-pop			IN 	CNAME	mail.autocar.ttt.
 
 www			IN 	CNAME	autocar.ttt.
 intranet	IN 	CNAME 	autocar.ttt.

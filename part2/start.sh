@@ -28,6 +28,10 @@ if [ "$1" = "http" ]; then
 	lstart sedeRouter sedePublicSwitch sedeEmailServer sedeHttpServer sedeAdminSwitch sedeRhPc leileiRouter leileiServer
 fi
 
+if [ "$1" = "email" ]; then
+	lstart sedeRouter sedePublicSwitch sedeEmailServer sedeAdminSwitch sedeRhPc sedeAdminPc
+fi
+
 if [ "$1" = "lisboa" ]; then
 	lstart sedeRouter sedePublicSwitch sedeEmailServer leileiRouter leileiServer lisboaRouter lisboaAdminSwitch lisboaAdminArmPc
 fi

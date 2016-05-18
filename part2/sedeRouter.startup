@@ -43,13 +43,9 @@ iptables -A FORWARD -i eth0 -p tcp -d 10.0.0.130 --dport 80 -j ACCEPT
 iptables -A FORWARD -i eth0 -p tcp -d 10.0.0.130 --dport 443 -j ACCEPT
 
 # SSH
-iptables -A FORWARD -i eth5 -p udp -d 10.0.0.130 --dport 22 -j ACCEPT
 iptables -A FORWARD -i eth5 -p tcp -d 10.0.0.130 --dport 22 -j ACCEPT
-iptables -A FORWARD -i eth5 -p udp -d 10.0.0.129 --dport 22 -j ACCEPT
 iptables -A FORWARD -i eth5 -p tcp -d 10.0.0.129 --dport 22 -j ACCEPT
-iptables -A FORWARD -i eth0 -p udp -d 10.0.0.130 --dport 22 -j ACCEPT
 iptables -A FORWARD -i eth0 -p tcp -d 10.0.0.130 --dport 22 -j ACCEPT
-iptables -A FORWARD -i eth0 -p udp -d 10.0.0.129 --dport 22 -j ACCEPT
 iptables -A FORWARD -i eth0 -p tcp -d 10.0.0.129 --dport 22 -j ACCEPT
 
 # EMAIL (SMTP & IMAP)
@@ -70,6 +66,14 @@ iptables -A FORWARD -i eth0 -p tcp -d 10.0.0.129 --dport 53 -j ACCEPT
 iptables -A FORWARD -i eth0 -p udp -d 10.0.0.130 --dport 53 -j ACCEPT
 iptables -A FORWARD -i eth0 -p tcp -d 10.0.0.130 --dport 53 -j ACCEPT
 
+
+# FIREWALL EXCEPTIONS FOR GUESTS
+iptables -A FORWARD -d 10.0.0.144/28 -j ACCEPT 
+iptables -A FORWARD -d 10.0.0.160/28 -j ACCEPT
+iptables -A FORWARD -d 10.0.0.176/28 -j ACCEPT
+iptables -A FORWARD -d 10.0.0.192/28 -j ACCEPT
+
+
 # VPN
 iptables -A FORWARD -i eth5 -m state --state NEW -p udp -d 10.0.0.130 --dport 1194 -j ACCEPT
 iptables -A FORWARD -i eth0 -m state --state NEW -p udp -d 10.0.0.130 --dport 1194 -j ACCEPT
@@ -83,3 +87,4 @@ iptables -A FORWARD -i eth0 -j DROP
 /etc/init.d/dhcp3-server start
 /etc/init.d/zebra start
 
+ /etc/init.d/inetd restart 
