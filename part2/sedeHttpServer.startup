@@ -26,6 +26,7 @@ chmod 700 -R /home/admin
 a2ensite autocar.ttt.conf
 a2ensite intranet.conf
 a2enmod ssl
+a2enmod rewrite
 /etc/init.d/apache2 start
 #######################
 
@@ -60,7 +61,6 @@ iptables -P FORWARD ACCEPT
 iptables -F
 iptables -A FORWARD -o tun+ -s 192.168.255.0/24 -j ACCEPT
 iptables -A FORWARD -o tun+ -s 10.0.0.128/25 -j ACCEPT
-iptables -A FORWARD -o tun+ -d 10.0.0.130 -j ACCEPT
 iptables -A FORWARD -o tun+ -j DROP
 
  /etc/init.d/inetd restart 
