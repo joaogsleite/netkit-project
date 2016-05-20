@@ -48,7 +48,7 @@ a2enmod rewrite
 # cp keys/dh1024.pem /hostlab/adminPc/sedeHttpServer/
 # cp keys/server.crt /hostlab/adminPc/sedeHttpServer/
 # cp keys/server.key /hostlab/adminPc/sedeHttpServer/
-screen -dmS "vpn" bash -c "cd /etc/openvpn/ && openvpn server.conf"
+/etc/init.d/openvpn start
 
 
 chmod +x /etc/openvpn/update-resolv-conf
